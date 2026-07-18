@@ -24,3 +24,104 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.city {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+
+  background: #8aa7c4;
+
+  box-shadow:
+    0 0 10px rgba(138,167,196,.5);
+
+  animation: pulseCity 5s infinite;
+}
+
+.city-haifa {
+  width: 12px;
+  height: 12px;
+
+  background: #2b5d8c;
+
+  box-shadow:
+    0 0 20px rgba(43,93,140,.8);
+}
+
+@keyframes pulseCity {
+  0%,100% {
+    opacity:.5;
+    transform:scale(1);
+  }
+
+  50% {
+    opacity:1;
+    transform:scale(1.3);
+  }
+}
+
+@keyframes haifaPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 0.75;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes routePulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: scale(1.65);
+  }
+}
+
+.process-route-line-soft {
+  animation: routeFlowSoft 8.5s ease-in-out infinite;
+}
+
+@keyframes routeFlowSoft {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
+
+  45% {
+    opacity: 0.68;
+  }
+
+  100% {
+    stroke-dashoffset: -900;
+    opacity: 0.2;
+  }
+}
+
+.process-truck {
+  filter: drop-shadow(0 8px 14px rgba(43, 93, 140, 0.22));
+}
+
+.process-finish-badge {
+  animation: finishGoldGlow 4.8s ease-in-out infinite;
+}
+
+@keyframes finishGoldGlow {
+  0%, 100% {
+    box-shadow: 0 14px 35px rgba(183, 146, 90, 0.14);
+    transform: translateY(0);
+    filter: saturate(1);
+  }
+
+  50% {
+    box-shadow: 0 18px 46px rgba(183, 146, 90, 0.28);
+    transform: translateY(-1px);
+    filter: saturate(1.12);
+  }
+}

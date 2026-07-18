@@ -1,0 +1,15 @@
+{
+  "navigation": {
+    "services": "Services",
+    "process": "How it works",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+
+  "hero": {
+    "title": "Your new move starts calmly",
+    "subtitle": "We support you before, during and after your move. You relax — we take care of everything.",
+    "whatsapp": "Get a quote on WhatsApp",
+    "call": "Call now"
+  }
+}
