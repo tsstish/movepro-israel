@@ -1,4 +1,16 @@
-import { ArrowRight, MapPin, Navigation, Route, Truck } from "lucide-react";
+import {
+  ArrowRight,
+  MapPin,
+  Navigation,
+  Route,
+  Truck,
+} from "lucide-react";
+
+const WHATSAPP_NUMBER = "972546745954";
+
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  "Здравствуйте! Хочу уточнить переезд по моему адресу."
+);
 
 const zones = [
   {
@@ -27,14 +39,14 @@ export default function GeographySection() {
   return (
     <section className="relative overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]">
       <div className="relative mx-auto max-w-7xl">
-        <div className="grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="relative overflow-hidden rounded-[36px] border border-white/70 bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF3FB] p-6 shadow-[0_20px_55px_rgba(16,33,63,0.065)] backdrop-blur-2xl">
+        <div className="grid gap-4 lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF3FB] p-6 shadow-[0_24px_60px_rgba(16,33,63,0.08)] backdrop-blur-xl">
             <div className="relative z-10">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#10213F] text-white shadow-[0_14px_30px_rgba(16,33,63,0.16)]">
-                <MapPin size={22} strokeWidth={1.8} />
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[16px] bg-[#10213F] text-white shadow-[0_12px_30px_rgba(16,33,63,0.14)]">
+                <MapPin size={20} strokeWidth={1.8} />
               </div>
 
-              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.28em] text-[#2B5D8C]">
+              <p className="mb-2 text-[12px] font-semibold uppercase tracking-[0.24em] text-[#2B5D8C]">
                 География
               </p>
 
@@ -48,16 +60,16 @@ export default function GeographySection() {
               </p>
 
               <a
-                href="https://wa.me/972000000000?text=Здравствуйте! Хочу уточнить переезд по моему адресу."
-                className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#10213F] px-6 py-3.5 text-sm font-medium text-white shadow-[0_16px_34px_rgba(16,33,63,0.16)] transition hover:-translate-y-0.5"
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                className="mt-6 inline-flex min-h-[46px] items-center gap-3 rounded-full bg-[#10213F] px-6 py-3 text-sm font-medium text-white shadow-[0_18px_42px_rgba(16,33,63,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.22)]"
               >
                 Уточнить мой адрес
-                <ArrowRight size={17} />
+                <ArrowRight size={18} strokeWidth={1.8} />
               </a>
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[36px] border border-white/70 bg-gradient-to-br from-[#F8FBFF] via-white to-[#F5E7D6] p-6 shadow-[0_20px_55px_rgba(16,33,63,0.065)] backdrop-blur-2xl">
+          <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-gradient-to-br from-[#F8FBFF] via-white to-[#F5E7D6] p-6 shadow-[0_24px_60px_rgba(16,33,63,0.08)] backdrop-blur-xl">
             <div className="relative z-10">
               <div className="mb-5 flex items-start justify-between gap-6">
                 <div>
@@ -70,7 +82,7 @@ export default function GeographySection() {
                   </h3>
                 </div>
 
-                <div className="hidden rounded-full border border-[#E7CDAE]/80 bg-gradient-to-r from-white via-[#FFF7E8] to-[#F2D9AD] px-4 py-2 text-sm font-semibold text-[#8A5F2E] shadow-[0_14px_35px_rgba(183,146,90,0.14)] lg:block">
+                <div className="hidden rounded-full border border-[#E7CDAE]/75 bg-gradient-to-r from-white via-[#FFF7E8] to-[#F2D9AD] px-4 py-2 text-sm font-semibold text-[#8A5F2E] shadow-[0_12px_30px_rgba(183,146,90,0.12)] lg:block">
                   По Израилю
                 </div>
               </div>
@@ -82,9 +94,9 @@ export default function GeographySection() {
                   return (
                     <article
                       key={zone.title}
-                      className="group rounded-[26px] border border-white/72 bg-white/68 p-4 shadow-[0_14px_34px_rgba(16,33,63,0.055)] backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:bg-white/84"
+                      className="group rounded-[24px] border border-white/70 bg-white/68 p-4 shadow-[0_12px_30px_rgba(16,33,63,0.06)] backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-1 hover:bg-white/84 hover:shadow-[0_16px_38px_rgba(16,33,63,0.09)]"
                     >
-                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl border border-[#BFD2EA]/75 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C] shadow-[0_10px_22px_rgba(43,93,140,0.12)]">
+                      <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-[16px] border border-[#BFD2EA]/70 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C] shadow-[0_10px_24px_rgba(43,93,140,0.1)]">
                         <Icon size={18} strokeWidth={1.8} />
                       </div>
 
@@ -100,7 +112,7 @@ export default function GeographySection() {
                 })}
               </div>
 
-              <div className="mt-4 rounded-[26px] border border-white/72 bg-white/62 p-4 shadow-[0_14px_34px_rgba(16,33,63,0.05)] backdrop-blur-2xl">
+              <div className="mt-4 rounded-[24px] border border-white/70 bg-white/62 p-4 shadow-[0_12px_30px_rgba(16,33,63,0.06)] backdrop-blur-xl">
                 <p className="text-[14px] leading-6 text-[#415064]">
                   Не уверены, подойдёт ли ваш маршрут? Просто напишите адреса —
                   мы быстро скажем, как лучше организовать перевозку.

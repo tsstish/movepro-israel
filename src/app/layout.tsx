@@ -4,18 +4,79 @@ import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
+  display: "swap",
 });
 
-export const metadata = {
-  title: "MovePro Israel — переезд без стресса по Израилю",
+export const metadata: Metadata = {
+  metadataBase: new URL("https://movepro-israel.vercel.app"),
+
+  title: {
+    default: "MovePro Israel — переезд без стресса по Израилю",
+    template: "%s | MovePro Israel",
+  },
+
   description:
-    "MovePro Israel — аккуратные переезды квартир, домов и офисов из Хайфы по всему Израилю. Упаковка, найлон, перевозка мебели и вещей без лишнего стресса.",
+    "MovePro Israel — квартирные, офисные и междугородние переезды из Хайфы по всему Израилю. Упаковка, защита мебели и аккуратная перевозка вещей.",
+
+  applicationName: "MovePro Israel",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  keywords: [
+    "переезды Израиль",
+    "переезд Хайфа",
+    "квартирный переезд",
+    "офисный переезд",
+    "междугородний переезд",
+    "перевозка мебели",
+    "грузчики Хайфа",
+    "MovePro Israel",
+  ],
+
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: "/",
+    siteName: "MovePro Israel",
+    title: "MovePro Israel — переезд без стресса",
+    description:
+      "Квартирные, офисные и междугородние переезды из Хайфы по всему Израилю.",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MovePro Israel — переезд без стресса",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "MovePro Israel — переезд без стресса",
+    description: "Аккуратные переезды из Хайфы по всему Израилю.",
+    images: ["/opengraph-image.jpg"],
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "/icon.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +85,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="ru">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

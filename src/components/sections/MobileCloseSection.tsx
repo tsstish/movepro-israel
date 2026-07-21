@@ -1,90 +1,78 @@
+import Image from "next/image";
 import {
+  ArrowRight,
+  MapPin,
   MessageCircle,
   Phone,
-  CheckCircle2,
-  PackageCheck,
-  Sofa,
-  MapPin,
+  ShieldCheck,
 } from "lucide-react";
 
-const items = [
-  {
-    icon: PackageCheck,
-    text: "Упакуем вещи в коробки, найлон, плёнки и защитные материалы",
-  },
-  {
-    icon: Sofa,
-    text: "Аккуратно перевезём мебель, технику и личные вещи",
-  },
-  {
-    icon: CheckCircle2,
-    text: "Заранее обсудим детали, чтобы не было неприятных сюрпризов",
-  },
-  {
-    icon: MapPin,
-    text: "Работаем из Хайфы по всему Израилю",
-  },
-];
+const PHONE_NUMBER = "+972546745954";
+const WHATSAPP_NUMBER = "972546745954";
+
+const WHATSAPP_MESSAGE = encodeURIComponent(
+  "Здравствуйте! Хочу обсудить переезд и получить расчёт."
+);
 
 export default function MobileCloseSection() {
   return (
-    <section className="bg-[#F4EFE7] px-4 pb-8 pt-2 text-[#101827] lg:hidden">
+    <section className="bg-[#F4EFE7] px-4 pb-7 pt-1 text-[#101827] lg:hidden">
       <div className="mx-auto max-w-md">
-        <div className="overflow-hidden rounded-[30px] border border-white/70 bg-gradient-to-br from-[#F8FBFF]/88 via-white/78 to-[#F4E8D9]/86 p-4 shadow-[0_18px_45px_rgba(16,33,63,0.065)] backdrop-blur-2xl">
-          <div className="rounded-[24px] border border-white/70 bg-white/62 p-4 shadow-[0_12px_26px_rgba(16,33,63,0.045)] backdrop-blur-xl">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#2B5D8C]">
-              Коротко
-            </p>
+        <div className="mobile-touch-image relative overflow-hidden rounded-[32px] shadow-[0_24px_60px_rgba(16,33,63,0.16)] transition duration-300 ease-out active:scale-[0.992]">
+          <div className="relative h-[430px]">
+            <Image
+              src="/images/service-apartment.webp"
+              alt="Аккуратный переезд квартиры с MovePro Israel"
+              fill
+              sizes="100vw"
+              className="object-cover transition duration-500 ease-out"
+            />
 
-            <h2 className="text-[25px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#10213F]">
-              Можно просто написать — мы подскажем, как лучше перевезти
-            </h2>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#10213F]/24 via-[#10213F]/56 to-[#10213F]/98" />
 
-            <p className="mt-2 text-[13.5px] leading-5 text-[#5B6573]">
-              Не нужно заранее знать точный объём, коробки и детали. Опишите
-              ситуацию — мы зададим нужные вопросы и сориентируем.
-            </p>
-          </div>
+            <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full border border-white/22 bg-[#10213F]/26 px-3.5 py-2 text-[12px] font-medium text-white shadow-[0_8px_22px_rgba(0,0,0,0.12)] backdrop-blur-xl">
+              <MapPin size={16} strokeWidth={1.8} />
+              Хайфа · весь Израиль
+            </div>
 
-          <div className="mt-3 space-y-2.5">
-            {items.map((item) => {
-              const Icon = item.icon;
+            <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div className="mb-4 flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#E7CDAE]">
+                <ShieldCheck size={16} strokeWidth={1.8} />
+                Можно не знать всех деталей
+              </div>
 
-              return (
-                <div
-                  key={item.text}
-                  className="flex gap-3 rounded-[22px] border border-white/70 bg-white/60 p-3.5 shadow-[0_10px_24px_rgba(16,33,63,0.045)] backdrop-blur-xl"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl border border-[#BFD2EA]/75 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C]">
-                    <Icon size={17} strokeWidth={1.8} />
-                  </div>
+              <h2 className="max-w-[330px] text-[31px] font-semibold leading-[1.02] tracking-[-0.045em] text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.62)]">
+                Просто расскажите, что нужно перевезти
+              </h2>
 
-                  <p className="text-[13.5px] leading-5 text-[#415064]">
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+              <p className="mt-3 max-w-[330px] text-[14px] leading-6 text-white/90 [text-shadow:0_2px_12px_rgba(0,0,0,0.55)]">
+                Мы уточним объём, этажи, маршрут и упаковку — и подскажем, как
+                организовать переезд спокойно.
+              </p>
 
-          <div className="mt-4 grid grid-cols-1 gap-2.5">
-            <a
-              href="https://wa.me/972000000000?text=Здравствуйте! Хочу обсудить переезд и получить расчёт."
-              className="flex items-center justify-center gap-2 rounded-full bg-[#10213F] px-5 py-4 text-[15px] font-medium text-white shadow-[0_16px_34px_rgba(16,33,63,0.18)]"
-            >
-              <MessageCircle size={18} />
-              Написать в WhatsApp
-            </a>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                className="mt-5 flex h-[56px] w-full items-center justify-center gap-3 rounded-[20px] bg-white px-5 text-[15px] font-semibold text-[#10213F] shadow-[0_18px_42px_rgba(0,0,0,0.2)] transition duration-300 ease-out active:scale-[0.98] active:bg-[#F5F8FC]"
+              >
+                <MessageCircle size={18} strokeWidth={1.8} />
+                Написать в WhatsApp
+                <ArrowRight size={18} strokeWidth={1.8} />
+              </a>
 
-            <a
-              href="tel:+972000000000"
-              className="flex items-center justify-center gap-2 rounded-full border border-white/75 bg-white/66 px-5 py-4 text-[15px] font-medium text-[#10213F] shadow-[0_12px_26px_rgba(16,33,63,0.06)] backdrop-blur-xl"
-            >
-              <Phone size={18} />
-              Позвонить сейчас
-            </a>
+              <a
+                href={`tel:${PHONE_NUMBER}`}
+                className="mx-auto mt-3 flex w-fit items-center gap-2 rounded-full px-3 py-2 text-[14px] font-medium text-white/82 transition duration-300 ease-out active:bg-white/10"
+              >
+                <Phone size={16} strokeWidth={1.8} />
+                Или позвонить
+              </a>
+            </div>
           </div>
         </div>
+
+        <p className="mx-auto mt-4 max-w-[330px] text-center text-[13px] leading-5 text-[#7A6858]">
+          Бережно перевезём и обычные вещи, и мебель, которая особенно дорога.
+        </p>
       </div>
     </section>
   );

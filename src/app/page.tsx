@@ -8,6 +8,7 @@ import GeographySection from "@/components/sections/GeographySection";
 import TrustSection from "@/components/sections/TrustSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <TrustSection />
         <FinalCTASection />
       </div>
+      <Footer />
       <MobileStickyCTA />
     </main>
   );
