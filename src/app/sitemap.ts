@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = "https://movepro-israel.vercel.app";
+  const siteUrl = "https://moveproisrael.online";
   const lastModified = new Date();
 
   return [
