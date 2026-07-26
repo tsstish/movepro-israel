@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = "https://movepro-israel.vercel.app";
+  const siteUrl = "https://moveproisrael.online";
 
   return {
     rules: {
