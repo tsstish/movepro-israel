@@ -54,14 +54,6 @@ export const metadata: Metadata = {
     title: "MovePro Israel — переезды в Хайфе и по всему Израилю",
     description:
       "Квартирные, офисные и междугородние переезды. Упаковка, защита мебели и аккуратная перевозка вещей.",
-    images: [
-      {
-        url: "/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MovePro Israel — переезды в Хайфе и по всему Израилю",
-      },
-    ],
   },
 
   twitter: {
@@ -69,7 +61,6 @@ export const metadata: Metadata = {
     title: "MovePro Israel — переезды в Хайфе и по всему Израилю",
     description:
       "Квартирные, офисные и междугородние переезды. Упаковка и аккуратная перевозка вещей.",
-    images: ["/opengraph-image.jpg"],
   },
 
   icons: {
