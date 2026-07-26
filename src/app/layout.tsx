@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://movepro-israel.vercel.app"),
+  metadataBase: new URL("https://moveproisrael.online"),
 
   title: {
-    default: "MovePro Israel — переезд без стресса по Израилю",
+    default: "MovePro Israel — переезды в Хайфе и по всему Израилю",
     template: "%s | MovePro Israel",
   },
 
   description:
-    "MovePro Israel — квартирные, офисные и междугородние переезды из Хайфы по всему Израилю. Упаковка, защита мебели и аккуратная перевозка вещей.",
+    "Квартирные, офисные и междугородние переезды в Хайфе и по всему Израилю. Упаковка, защита мебели, перевозка вещей и помощь с организацией переезда.",
 
   applicationName: "MovePro Israel",
 
@@ -34,11 +34,15 @@ export const metadata: Metadata = {
   keywords: [
     "переезды Израиль",
     "переезд Хайфа",
-    "квартирный переезд",
-    "офисный переезд",
-    "междугородний переезд",
-    "перевозка мебели",
+    "перевозки Хайфа",
+    "квартирный переезд Хайфа",
+    "офисный переезд Хайфа",
+    "междугородний переезд Израиль",
+    "перевозка мебели Хайфа",
     "грузчики Хайфа",
+    "moving company Haifa",
+    "movers Haifa",
+    "moving Israel",
     "MovePro Israel",
   ],
 
@@ -47,23 +51,24 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     url: "/",
     siteName: "MovePro Israel",
-    title: "MovePro Israel — переезд без стресса",
+    title: "MovePro Israel — переезды в Хайфе и по всему Израилю",
     description:
-      "Квартирные, офисные и междугородние переезды из Хайфы по всему Израилю.",
+      "Квартирные, офисные и междугородние переезды. Упаковка, защита мебели и аккуратная перевозка вещей.",
     images: [
       {
         url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MovePro Israel — переезд без стресса",
+        alt: "MovePro Israel — переезды в Хайфе и по всему Израилю",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "MovePro Israel — переезд без стресса",
-    description: "Аккуратные переезды из Хайфы по всему Израилю.",
+    title: "MovePro Israel — переезды в Хайфе и по всему Израилю",
+    description:
+      "Квартирные, офисные и междугородние переезды. Упаковка и аккуратная перевозка вещей.",
     images: ["/opengraph-image.jpg"],
   },
 
@@ -76,6 +81,18 @@ export const metadata: Metadata = {
     ],
     shortcut: "/icon.png",
     apple: "/icon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
