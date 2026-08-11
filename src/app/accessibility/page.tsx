@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Заявление о доступности",
   description:
     "Информация о доступности сайта MovePro Israel и способах сообщить о проблеме.",
+  alternates: {
+    canonical: "/accessibility",
+  },
 };
 
 const accessibilityItems = [

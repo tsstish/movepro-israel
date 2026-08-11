@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Условия использования",
   description:
     "Условия использования сайта MovePro Israel и общие правила обращения за услугой.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

@@ -4,7 +4,7 @@ const organizationSchema = {
   "@id": "https://moveproisrael.online/#organization",
   name: "MovePro Israel",
   url: "https://moveproisrael.online",
-  logo: "https://moveproisrael.online/icon.png",
+  logo: "https://moveproisrael.online/images/logo-primary.png",
   description:
     "Квартирные, офисные и междугородние переезды в Хайфе и по всему Израилю. Упаковка, защита мебели и аккуратная перевозка вещей.",
   telephone: "+972546745954",

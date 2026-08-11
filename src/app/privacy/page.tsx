@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Политика конфиденциальности",
   description:
     "Политика конфиденциальности сайта MovePro Israel.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {
