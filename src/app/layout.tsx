@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import AnalyticsClickTracker from "@/components/AnalyticsClickTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,6 +101,7 @@ return (
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <OrganizationSchema />
+      <AnalyticsClickTracker />
       {children}
     </body>
 
