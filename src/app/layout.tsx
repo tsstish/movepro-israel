@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import OrganizationSchema from "@/components/OrganizationSchema";
 
@@ -93,14 +94,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="ru">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
-      >
-        <OrganizationSchema />
-        {children}
-      </body>
-    </html>
-  );
+return (
+  <html lang="ru">
+    <body
+      className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
+    >
+      <OrganizationSchema />
+      {children}
+    </body>
+
+    <GoogleAnalytics gaId="G-X2TF7EXGLC" />
+  </html>
+);
 }
