@@ -16,6 +16,12 @@ export default function Home() {
       <HeroSection />
 
       <MobileActionSection />
+
+      <div className="lg:hidden">
+        <ServicesSection />
+        <GeographySection />
+      </div>
+
       <MobileCloseSection />
 
       <div className="hidden lg:block">
@@ -26,6 +32,7 @@ export default function Home() {
         <TrustSection />
         <FinalCTASection />
       </div>
+
       <Footer />
       <MobileStickyCTA />
     </main>

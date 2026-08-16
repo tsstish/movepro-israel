@@ -32,10 +32,10 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="mt-5 w-full text-[clamp(43px,8.6vw,64px)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#101827] lg:mt-0 lg:max-w-3xl lg:text-[76px]">
-              Ваш новый переезд начинается{" "}
-              <span className="relative mt-1 block w-fit font-serif italic text-[#2B5D8C] sm:ml-auto sm:mr-8 lg:ml-0 lg:mr-0 lg:inline-block lg:-rotate-2">
-                спокойно
+<h1 className="mt-5 w-full text-[clamp(43px,8.6vw,64px)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#101827] lg:mt-0 lg:max-w-3xl lg:text-[76px]">
+  Переезды в Хайфе и по всему Израилю{" "}
+  <span className="relative mt-1 block w-fit font-serif italic text-[#2B5D8C] sm:ml-auto sm:mr-8 lg:ml-0 lg:mr-0 lg:inline-block lg:-rotate-2">
+    спокойно
 
                 <svg
                   className="absolute -bottom-2 left-0 h-3 w-full lg:-bottom-4 lg:h-5"
