@@ -42,7 +42,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]">
+    <section
+  id="services"
+  className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]"
+>
       <div className="pointer-events-none absolute left-0 top-10 h-72 w-72 rounded-full bg-[#2B5D8C]/8 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#E7CDAE]/20 blur-3xl" />
 

@@ -32,7 +32,10 @@ const details = [
 
 export default function FinalCTASection() {
   return (
-    <section className="relative overflow-hidden bg-[#F4EFE7] px-5 pb-10 pt-8 text-[#101827]">
+    <section
+  id="estimate"
+  className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 pb-10 pt-8 text-[#101827]"
+>
       <div className="relative mx-auto max-w-7xl">
         <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-gradient-to-r from-[#10213F] via-[#17365D] to-[#2B5D8C] p-8 text-white shadow-[0_24px_60px_rgba(16,33,63,0.18)]">
           <div className="pointer-events-none absolute -left-20 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-white/8 blur-3xl" />

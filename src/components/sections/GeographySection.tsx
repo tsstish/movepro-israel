@@ -37,7 +37,10 @@ const zones = [
 
 export default function GeographySection() {
   return (
-    <section className="relative overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]">
+    <section
+  id="areas"
+  className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]"
+>
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-4 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-gradient-to-br from-white via-[#F8FBFF] to-[#EAF3FB] p-6 shadow-[0_24px_60px_rgba(16,33,63,0.08)] backdrop-blur-xl">

@@ -48,7 +48,10 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="relative overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]">
+    <section
+  id="how-it-works"
+  className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]"
+>
       <div className="pointer-events-none absolute left-1/2 top-8 h-72 w-[720px] -translate-x-1/2 rounded-full bg-[#2B5D8C]/7 blur-3xl" />
 
       <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#E7CDAE]/20 blur-3xl" />
