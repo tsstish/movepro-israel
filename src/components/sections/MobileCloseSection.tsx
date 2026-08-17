@@ -51,7 +51,7 @@ export default function MobileCloseSection() {
               </p>
 
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                href="/whatsapp"
                 className="mt-5 flex h-[56px] w-full items-center justify-center gap-3 rounded-[20px] bg-white px-5 text-[15px] font-semibold text-[#10213F] shadow-[0_18px_42px_rgba(0,0,0,0.2)] transition duration-300 ease-out active:scale-[0.98] active:bg-[#F5F8FC]"
               >
                 <MessageCircle size={18} strokeWidth={1.8} />

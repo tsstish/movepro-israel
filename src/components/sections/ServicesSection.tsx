@@ -88,7 +88,7 @@ export default function ServicesSection() {
               </p>
 
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                href="/whatsapp"
                 className="mt-6 inline-flex min-h-[46px] items-center gap-3 rounded-full bg-[#10213F] px-6 py-3 text-sm font-medium text-white shadow-[0_18px_42px_rgba(16,33,63,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.22)]"
               >
                 Обсудить переезд

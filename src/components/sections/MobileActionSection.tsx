@@ -196,7 +196,7 @@ export default function MobileActionSection() {
           </div>
 
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappText}`}
+            href="/whatsapp"
             className="mt-4 flex h-[56px] items-center justify-center gap-3 rounded-[20px] bg-[#10213F] px-5 text-[15px] font-semibold text-white shadow-[0_18px_40px_rgba(16,33,63,0.2)] transition duration-300 ease-out active:scale-[0.98] active:bg-[#17345E]"
           >
             <MessageCircle size={18} strokeWidth={1.8} />

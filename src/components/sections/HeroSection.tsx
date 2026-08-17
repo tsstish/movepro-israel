@@ -148,11 +148,11 @@ function DesktopHeader() {
         </GlassButton>
 
         <GlassButton
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-          icon={<MessageCircle size={18} strokeWidth={1.8} />}
-        >
-          WhatsApp
-        </GlassButton>
+  href="/whatsapp"
+  icon={<MessageCircle size={18} strokeWidth={1.8} />}
+>
+  WhatsApp
+</GlassButton>
       </div>
     </header>
   );
@@ -162,9 +162,9 @@ function MobileHeroActions() {
   return (
     <div className="mt-8 lg:hidden">
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-        className="flex h-[58px] w-full items-center justify-center gap-3 rounded-[20px] bg-[#10213F] px-5 text-[16px] font-semibold text-white shadow-[0_18px_42px_rgba(16,33,63,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.24)] active:scale-[0.985]"
-      >
+  href="/whatsapp"
+  className="flex h-[58px] w-full items-center justify-center gap-3 rounded-[20px] bg-[#10213F] px-5 text-[16px] font-semibold text-white shadow-[0_18px_42px_rgba(16,33,63,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.24)] active:scale-[0.985]"
+>
         <MessageCircle size={20} strokeWidth={1.8} />
         Получить расчёт
         <ArrowRight size={18} strokeWidth={1.8} />
@@ -185,10 +185,10 @@ function DesktopHeroActions() {
   return (
     <div className="mt-8 hidden gap-3 lg:flex">
       <GlassButton
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-        large
-        icon={<MessageCircle size={18} strokeWidth={1.8} />}
-      >
+  href="/whatsapp"
+  large
+  icon={<MessageCircle size={18} strokeWidth={1.8} />}
+>
         <span>
           Получить расчёт
 

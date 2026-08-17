@@ -60,9 +60,9 @@ export default function FinalCTASection() {
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${CALC_MESSAGE}`}
-                  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-[#10213F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#F8FBFF] hover:shadow-[0_22px_48px_rgba(0,0,0,0.18)]"
-                >
+  href="/whatsapp"
+  className="inline-flex min-h-[58px] items-center justify-center gap-3 rounded-full bg-white px-7 py-3.5 text-[15px] font-semibold text-[#10213F] shadow-[0_18px_42px_rgba(0,0,0,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#F8FBFF] hover:shadow-[0_22px_48px_rgba(0,0,0,0.18)]"
+>
                   <MessageCircle size={18} strokeWidth={1.8} />
                   Получить расчёт в WhatsApp
                 </a>
@@ -105,7 +105,7 @@ export default function FinalCTASection() {
                 })}
 
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${DETAILS_MESSAGE}`}
+                  href="/whatsapp"
                   className="group mt-2 flex min-h-[46px] items-center justify-between rounded-full border border-white/18 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:bg-white/16"
                 >
                   Написать и уточнить детали

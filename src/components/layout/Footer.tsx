@@ -48,9 +48,9 @@ export default function Footer() {
 
               <div className="mt-3 space-y-2.5">
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-                  className="flex items-center gap-2 text-[12.5px] leading-none text-white/68 transition duration-300 ease-out hover:translate-x-0.5 hover:text-white lg:text-[13px]"
-                >
+  href="/whatsapp"
+  className="flex items-center gap-2 text-[12.5px] leading-none text-white/68 transition duration-300 ease-out hover:translate-x-0.5 hover:text-white lg:text-[13px]"
+>
                   <MessageCircle
                     size={16}
                     strokeWidth={1.8}
