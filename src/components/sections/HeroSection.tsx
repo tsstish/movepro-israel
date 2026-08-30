@@ -35,7 +35,7 @@ export default function HeroSection() {
 <h1 className="mt-5 w-full text-[clamp(43px,8.6vw,64px)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#101827] lg:mt-0 lg:max-w-3xl lg:text-[76px]">
   Переезды в Хайфе и по всему Израилю{" "}
   <span className="relative mt-1 block w-fit font-serif italic text-[#2B5D8C] sm:ml-auto sm:mr-8 lg:ml-0 lg:mr-0 lg:inline-block lg:-rotate-2">
-    спокойно
+    без лишних забот
 
                 <svg
                   className="absolute -bottom-2 left-0 h-3 w-full lg:-bottom-4 lg:h-5"
@@ -54,8 +54,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-7 w-full max-w-none text-[17px] leading-7 text-[#4B5563] sm:max-w-[640px] sm:text-[18px] sm:leading-8 lg:mt-8 lg:max-w-xl">
-              Организуем переезд, защитим вещи и аккуратно доставим их на новое
-              место — без лишнего хаоса.
+              Квартиры, дома, офисы и отдельные вещи. Поможем с упаковкой,
+              разборкой мебели и организуем перевозку от адреса до адреса.
             </p>
 
             <MobileHeroActions />
@@ -166,7 +166,7 @@ function MobileHeroActions() {
   className="flex h-[58px] w-full items-center justify-center gap-3 rounded-[20px] bg-[#10213F] px-5 text-[16px] font-semibold text-white shadow-[0_18px_42px_rgba(16,33,63,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.24)] active:scale-[0.985]"
 >
         <MessageCircle size={20} strokeWidth={1.8} />
-        Получить расчёт
+        Рассчитать переезд
         <ArrowRight size={18} strokeWidth={1.8} />
       </a>
 
@@ -190,7 +190,7 @@ function DesktopHeroActions() {
   icon={<MessageCircle size={18} strokeWidth={1.8} />}
 >
         <span>
-          Получить расчёт
+          Рассчитать переезд
 
           <span className="block text-xs font-normal text-white/65">
             в WhatsApp
