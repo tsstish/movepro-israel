@@ -77,37 +77,29 @@ export default function HeroSection() {
 
 function MobileHeader() {
   return (
-    <header className="flex h-[88px] items-center justify-between lg:hidden">
+    <header className="flex h-[82px] items-center lg:hidden">
       <div className="flex min-w-0 items-center gap-3">
-        <div className="relative h-[74px] w-[74px] shrink-0 overflow-visible">
+        <div className="relative h-[68px] w-[68px] shrink-0 overflow-visible">
           <Image
             src="/images/logo-heart.png"
             alt="MovePro Israel"
             fill
-            sizes="74px"
+            sizes="68px"
             className="scale-[1.38] object-contain"
             priority
           />
         </div>
 
-        <div className="flex h-[58px] min-w-0 flex-col justify-center">
-          <div className="whitespace-nowrap text-[22px] font-semibold leading-none tracking-[-0.035em] text-[#10213F]">
+        <div className="flex min-w-0 flex-col justify-center">
+          <div className="whitespace-nowrap text-[21px] font-semibold leading-none tracking-[-0.035em] text-[#10213F]">
             MovePro Israel
           </div>
 
-          <div className="mt-1.5 whitespace-nowrap text-[13px] leading-none text-[#6B7280]">
+          <div className="mt-1.5 text-[12.5px] leading-none text-[#6B7280]">
             Переезд без стресса
           </div>
         </div>
       </div>
-
-      <a
-        href={`tel:${PHONE_NUMBER}`}
-        aria-label="Позвонить в MovePro Israel"
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/75 bg-white/65 text-[#10213F] shadow-[0_12px_30px_rgba(16,33,63,0.08)] backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white/80 active:scale-95"
-      >
-        <Phone size={18} strokeWidth={1.8} />
-      </a>
     </header>
   );
 }
@@ -160,22 +152,15 @@ function DesktopHeader() {
 
 function MobileHeroActions() {
   return (
-    <div className="mt-8 lg:hidden">
+    <div className="mt-7 lg:hidden">
       <a
-  href="/whatsapp"
-  className="flex h-[58px] w-full items-center justify-center gap-3 rounded-[20px] bg-[#10213F] px-5 text-[16px] font-semibold text-white shadow-[0_18px_42px_rgba(16,33,63,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.24)] active:scale-[0.985]"
->
-        <MessageCircle size={20} strokeWidth={1.8} />
-        Рассчитать переезд
-        <ArrowRight size={18} strokeWidth={1.8} />
-      </a>
-
-      <a
-        href={`tel:${PHONE_NUMBER}`}
-        className="mx-auto mt-3 flex w-fit items-center gap-2 rounded-full px-3 py-2 text-[14px] font-semibold text-[#2B5D8C] transition duration-300 ease-out hover:bg-white/45 hover:text-[#10213F]"
+        href="/whatsapp"
+        data-cta="hero"
+        className="flex h-[56px] w-full items-center justify-center gap-3 rounded-[18px] bg-[#10213F] px-5 text-[15px] font-semibold text-white shadow-[0_16px_36px_rgba(16,33,63,0.18)] transition active:scale-[0.985]"
       >
-        <Phone size={18} strokeWidth={1.8} />
-        Позвонить сейчас
+        <MessageCircle size={19} strokeWidth={1.8} />
+        Рассчитать переезд
+        <ArrowRight size={17} strokeWidth={1.8} />
       </a>
     </div>
   );

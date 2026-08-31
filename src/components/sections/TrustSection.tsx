@@ -1,132 +1,101 @@
 import Image from "next/image";
-import {
-  MapPin,
-  PackageCheck,
-  ShieldCheck,
-  Truck,
-  UsersRound,
-} from "lucide-react";
+import { MapPin, Truck, UsersRound } from "lucide-react";
 
 const facts = [
   {
     icon: Truck,
-    value: "4 грузовика",
-    text: "под разные объёмы",
+    value: "4",
+    label: "грузовика",
   },
   {
     icon: UsersRound,
-    value: "до 15 грузчиков",
-    text: "аккуратная команда",
+    value: "до 15",
+    label: "грузчиков",
   },
   {
     icon: MapPin,
-    value: "по Израилю",
-    text: "Хайфа, север и центр",
-  },
-];
-
-const details = [
-  {
-    icon: ShieldCheck,
-    text: "Маршрут, этажи, лифт и объём обсуждаем заранее",
-  },
-  {
-    icon: PackageCheck,
-    text: "Коробки, найлон, плёнки и защита мебели",
-  },
-  {
-    icon: Truck,
-    text: "Квартирные, офисные и междугородние переезды",
+    value: "Израиль",
+    label: "география работы",
   },
 ];
 
 export default function TrustSection() {
   return (
-    <section className="bg-[#F4EFE7] px-5 py-8 text-[#101827]">
+    <section className="bg-[#F4EFE7] px-5 py-8 text-[#101827] lg:py-12">
       <div className="mx-auto max-w-7xl">
-        <div className="grid overflow-hidden rounded-[32px] border border-white/70 bg-white/55 shadow-[0_24px_60px_rgba(16,33,63,0.08)] lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="group relative min-h-[460px] overflow-hidden">
+        <div className="overflow-hidden rounded-[30px] bg-[#10213F] shadow-[0_22px_55px_rgba(16,33,63,0.13)] lg:grid lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="relative min-h-[360px] overflow-hidden sm:min-h-[430px] lg:min-h-[520px]">
             <Image
               src="/images/service-furniture.webp"
               alt="Бережная перевозка мебели MovePro Israel"
               fill
-              sizes="45vw"
-              className="object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+              sizes="(max-width: 1023px) 100vw, 58vw"
+              className="object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#10213F]/90 via-[#10213F]/36 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#10213F]/95 via-[#10213F]/28 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#10213F]/30" />
 
-            <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#E7CDAE]">
+            <div className="absolute inset-x-0 bottom-0 p-6 text-white lg:hidden">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#E7CDAE]">
                 Бережная перевозка
               </p>
 
-              <h2 className="mt-3 max-w-lg text-[40px] font-semibold leading-[1.02] tracking-[-0.045em]">
+              <h2 className="mt-2 max-w-md text-[29px] font-semibold leading-[1.03] tracking-[-0.04em]">
                 Можно доверить и обычные вещи, и дорогую мебель
               </h2>
 
-              <p className="mt-4 max-w-md text-[15px] leading-6 text-white/78">
+              <p className="mt-3 max-w-sm text-[13px] leading-5 text-white/72">
                 Защищаем, упаковываем и заранее обсуждаем детали переезда.
               </p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-[#F8FBFF] via-white to-[#F5E7D6] p-7">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#2B5D8C]">
-              Почему спокойно
-            </p>
+          <div className="px-6 pb-7 pt-6 text-white lg:flex lg:flex-col lg:justify-center lg:p-9">
+            <div className="hidden lg:block">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E7CDAE]">
+                Бережная перевозка
+              </p>
 
-            <h3 className="mt-3 max-w-xl text-[38px] font-semibold leading-[1.03] tracking-[-0.045em] text-[#10213F]">
-              Переезд по плану, а не «как получится»
-            </h3>
+              <h2 className="mt-3 text-[38px] font-semibold leading-[1.03] tracking-[-0.045em]">
+                Можно доверить и обычные вещи, и дорогую мебель
+              </h2>
 
-            <div className="mt-7 grid grid-cols-3 gap-3">
+              <p className="mt-4 text-[14px] leading-6 text-white/68">
+                Защищаем, упаковываем и заранее обсуждаем детали переезда.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 divide-x divide-white/15 border-y border-white/15">
               {facts.map((fact) => {
                 const Icon = fact.icon;
 
                 return (
-                  <article
-                    key={fact.value}
-                    className="rounded-[24px] border border-white/70 bg-white/66 p-4 shadow-[0_12px_30px_rgba(16,33,63,0.06)] transition duration-300 ease-out hover:-translate-y-1 hover:bg-white/82 hover:shadow-[0_16px_38px_rgba(16,33,63,0.09)]"
+                  <div
+                    key={fact.label}
+                    className="min-w-0 px-2 py-5 first:pl-0 last:pr-0 sm:px-4"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-[16px] bg-[#E4F0FB] text-[#2B5D8C]">
-                      <Icon size={18} strokeWidth={1.8} />
-                    </div>
+                    <Icon
+                      size={17}
+                      strokeWidth={1.7}
+                      className="mb-3 text-[#E7CDAE]"
+                    />
 
-                    <div className="mt-4 text-[18px] font-semibold text-[#10213F]">
+                    <div className="text-[19px] font-semibold leading-none tracking-[-0.03em] sm:text-[24px]">
                       {fact.value}
                     </div>
 
-                    <div className="mt-1 text-[12.5px] leading-5 text-[#6B7280]">
-                      {fact.text}
+                    <div className="mt-1.5 text-[10.5px] leading-4 text-white/55 sm:text-[12px]">
+                      {fact.label}
                     </div>
-                  </article>
-                );
-              })}
-            </div>
-
-            <div className="mt-5 space-y-3">
-              {details.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <div
-                    key={item.text}
-                    className="flex items-center gap-3 rounded-[24px] border border-white/65 bg-white/60 px-4 py-3.5 shadow-[0_12px_30px_rgba(16,33,63,0.05)] transition duration-300 ease-out hover:bg-white/78"
-                  >
-                    <Icon
-                      size={18}
-                      strokeWidth={1.8}
-                      className="shrink-0 text-[#2B5D8C]"
-                    />
-
-                    <span className="text-[14px] leading-5 text-[#415064]">
-                      {item.text}
-                    </span>
                   </div>
                 );
               })}
             </div>
+
+            <p className="mt-5 text-[12.5px] leading-5 text-white/58">
+              Квартирные, офисные и междугородние переезды. При необходимости —
+              упаковка, защита, разборка и сборка мебели.
+            </p>
           </div>
         </div>
       </div>

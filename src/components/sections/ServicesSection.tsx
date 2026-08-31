@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {
-  ArrowRight,
   Building2,
   Home,
   PackageCheck,
@@ -68,8 +67,8 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid gap-4 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-gradient-to-br from-white/78 via-[#F8FBFF]/82 to-[#DCEBFA]/58 p-6 shadow-[0_24px_60px_rgba(16,33,63,0.08)] backdrop-blur-xl">
-            <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#2B5D8C]/12 blur-3xl" />
+          <div className="relative isolate overflow-hidden rounded-[32px] [clip-path:inset(0_round_32px)] border border-white/70 bg-gradient-to-br from-white/82 via-[#F8FBFF]/78 to-[#EEF3F6]/72 p-6 shadow-[0_24px_60px_rgba(16,33,63,0.08)] backdrop-blur-xl">
+            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#9EB6C9]/18 blur-[55px]" />
 
             <div className="relative">
               <p className="mb-3 text-sm font-medium text-[#8A735F]">
@@ -86,14 +85,6 @@ export default function ServicesSection() {
                 какие материалы понадобятся. Нам можно доверить и бабушкино
                 кресло, и дорогую итальянскую мебель.
               </p>
-
-              <a
-                href="/whatsapp"
-                className="mt-6 inline-flex min-h-[46px] items-center gap-3 rounded-full bg-[#10213F] px-6 py-3 text-sm font-medium text-white shadow-[0_18px_42px_rgba(16,33,63,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#17345E] hover:shadow-[0_22px_48px_rgba(16,33,63,0.22)]"
-              >
-                Обсудить переезд
-                <ArrowRight size={18} strokeWidth={1.8} />
-              </a>
             </div>
           </div>
 
