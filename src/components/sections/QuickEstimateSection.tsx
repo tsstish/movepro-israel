@@ -52,7 +52,7 @@ export default function QuickEstimateSection() {
               </h2>
 
               <p className="mt-3 max-w-md text-[14px] leading-[1.55] text-[#5B6573]">
-                Укажите основные детали — остальное уточним в WhatsApp.
+                Укажите основные детали — продолжим расчёт в WhatsApp.
               </p>
 
               <p className="mt-3 flex gap-2 text-[12.5px] leading-5 text-[#8A735F]">
@@ -129,7 +129,7 @@ export default function QuickEstimateSection() {
                 className="mt-4 flex min-h-[52px] w-full items-center justify-center gap-2.5 rounded-[17px] bg-[#10213F] px-5 py-3 text-[14px] font-semibold text-white shadow-[0_14px_34px_rgba(16,33,63,0.16)] transition hover:bg-[#17345E] active:scale-[0.99]"
               >
                 <MessageCircle size={17} strokeWidth={1.8} />
-                Получить расчёт
+                Отправить и получить расчёт
                 <ArrowRight size={16} strokeWidth={1.8} />
               </a>
             </div>

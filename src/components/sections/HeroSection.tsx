@@ -159,7 +159,7 @@ function MobileHeroActions() {
         className="flex h-[56px] w-full items-center justify-center gap-3 rounded-[18px] bg-[#10213F] px-5 text-[15px] font-semibold text-white shadow-[0_16px_36px_rgba(16,33,63,0.18)] transition active:scale-[0.985]"
       >
         <MessageCircle size={19} strokeWidth={1.8} />
-        Рассчитать переезд
+        Получить расчёт в WhatsApp
         <ArrowRight size={17} strokeWidth={1.8} />
       </a>
     </div>
@@ -175,7 +175,7 @@ function DesktopHeroActions() {
   icon={<MessageCircle size={18} strokeWidth={1.8} />}
 >
         <span>
-          Рассчитать переезд
+          Получить расчёт в WhatsApp
 
           <span className="block text-xs font-normal text-white/65">
             в WhatsApp
