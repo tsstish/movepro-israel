@@ -6,12 +6,6 @@ import {
   Sofa,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "972546745954";
-
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Здравствуйте! Хочу обсудить переезд и получить расчёт."
-);
-
 const services = [
   {
     icon: Home,
@@ -42,9 +36,9 @@ const services = [
 export default function ServicesSection() {
   return (
     <section
-  id="services"
-  className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]"
->
+      id="services"
+      className="relative scroll-mt-20 overflow-hidden bg-[#F4EFE7] px-5 py-8 text-[#101827]"
+    >
       <div className="pointer-events-none absolute left-0 top-10 h-72 w-72 rounded-full bg-[#2B5D8C]/8 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#E7CDAE]/20 blur-3xl" />
 
@@ -88,80 +82,39 @@ export default function ServicesSection() {
             </div>
           </div>
 
-          <div className="hidden gap-4 sm:grid sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
             {services.map((service) => {
               const Icon = service.icon;
 
               return (
                 <article
                   key={service.title}
-                  className="group overflow-hidden rounded-[24px] border border-white/70 bg-white/60 shadow-[0_12px_30px_rgba(16,33,63,0.06)] backdrop-blur-xl transition duration-300 ease-out hover:-translate-y-1 hover:bg-white/78 hover:shadow-[0_16px_38px_rgba(16,33,63,0.09)]"
+                  className="group grid grid-cols-[96px_1fr] overflow-hidden rounded-[24px] border border-white/70 bg-white/66 shadow-[0_12px_30px_rgba(16,33,63,0.06)] backdrop-blur-xl transition duration-300 ease-out active:scale-[0.99] sm:block sm:bg-white/60 sm:hover:-translate-y-1 sm:hover:bg-white/78 sm:hover:shadow-[0_16px_38px_rgba(16,33,63,0.09)]"
                 >
-                  <div className="relative h-28 overflow-hidden">
+                  <div className="relative min-h-[112px] overflow-hidden sm:h-28 sm:min-h-0">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
-                      sizes="(min-width: 1024px) 280px, 50vw"
-                      className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                      sizes="(min-width: 1024px) 280px, (min-width: 640px) 50vw, 96px"
+                      className="object-cover transition duration-700 ease-out sm:group-hover:scale-105"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#10213F]/26 via-transparent to-white/8" />
+                    <div className="absolute inset-0 bg-[#10213F]/8 sm:bg-gradient-to-t sm:from-[#10213F]/26 sm:via-transparent sm:to-white/8" />
                   </div>
 
-                  <div className="p-4">
-                    <div className="mb-3 flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-[16px] border border-[#BFD2EA]/70 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C] shadow-[0_10px_24px_rgba(43,93,140,0.1)]">
+                  <div className="p-3.5 sm:p-4">
+                    <div className="mb-2 flex items-center gap-2.5 sm:mb-3 sm:gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[14px] border border-[#BFD2EA]/70 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C] sm:h-10 sm:w-10 sm:rounded-[16px] sm:shadow-[0_10px_24px_rgba(43,93,140,0.1)]">
                         <Icon size={18} strokeWidth={1.8} />
                       </div>
 
-                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-[#10213F]">
+                      <h3 className="text-[15px] font-semibold leading-tight tracking-[-0.02em] text-[#10213F] sm:text-[16px]">
                         {service.title}
                       </h3>
                     </div>
 
-                    <p className="text-[13.5px] leading-5 text-[#5B6573]">
-                      {service.text}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-
-          <div className="grid gap-3 sm:hidden">
-            {services.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <article
-                  key={service.title}
-                  className="grid grid-cols-[96px_1fr] overflow-hidden rounded-[24px] border border-white/70 bg-white/66 shadow-[0_12px_30px_rgba(16,33,63,0.06)] backdrop-blur-xl transition duration-300 ease-out active:scale-[0.99]"
-                >
-                  <div className="relative min-h-[112px] overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      sizes="96px"
-                      className="object-cover"
-                    />
-
-                    <div className="absolute inset-0 bg-[#10213F]/8" />
-                  </div>
-
-                  <div className="p-3.5">
-                    <div className="mb-2 flex items-center gap-2.5">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[14px] border border-[#BFD2EA]/70 bg-gradient-to-br from-white to-[#E4F0FB] text-[#2B5D8C]">
-                        <Icon size={18} strokeWidth={1.8} />
-                      </div>
-
-                      <h3 className="text-[15px] font-semibold leading-tight tracking-[-0.02em] text-[#10213F]">
-                        {service.title}
-                      </h3>
-                    </div>
-
-                    <p className="text-[12.5px] leading-5 text-[#5B6573]">
+                    <p className="text-[12.5px] leading-5 text-[#5B6573] sm:text-[13.5px]">
                       {service.text}
                     </p>
                   </div>

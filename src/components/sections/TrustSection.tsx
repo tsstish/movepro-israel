@@ -34,33 +34,19 @@ export default function TrustSection() {
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#10213F]/95 via-[#10213F]/28 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#10213F]/30" />
-
-            <div className="absolute inset-x-0 bottom-0 p-6 text-white lg:hidden">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#E7CDAE]">
-                Бережная перевозка
-              </p>
-
-              <h2 className="mt-2 max-w-md text-[29px] font-semibold leading-[1.03] tracking-[-0.04em]">
-                Можно доверить и обычные вещи, и дорогую мебель
-              </h2>
-
-              <p className="mt-3 max-w-sm text-[13px] leading-5 text-white/72">
-                Защищаем, упаковываем и заранее обсуждаем детали переезда.
-              </p>
-            </div>
           </div>
 
-          <div className="px-6 pb-7 pt-6 text-white lg:flex lg:flex-col lg:justify-center lg:p-9">
-            <div className="hidden lg:block">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#E7CDAE]">
+          <div className="relative z-10 -mt-[165px] px-6 pb-7 text-white lg:mt-0 lg:flex lg:flex-col lg:justify-center lg:p-9">
+            <div className="flex min-h-[165px] flex-col justify-end pb-6 lg:min-h-0 lg:justify-start lg:pb-0">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#E7CDAE] lg:text-[11px]">
                 Бережная перевозка
               </p>
 
-              <h2 className="mt-3 text-[38px] font-semibold leading-[1.03] tracking-[-0.045em]">
+              <h2 className="mt-2 max-w-md text-[29px] font-semibold leading-[1.03] tracking-[-0.04em] lg:mt-3 lg:max-w-none lg:text-[38px] lg:tracking-[-0.045em]">
                 Можно доверить и обычные вещи, и дорогую мебель
               </h2>
 
-              <p className="mt-4 text-[14px] leading-6 text-white/68">
+              <p className="mt-3 max-w-sm text-[13px] leading-5 text-white/72 lg:mt-4 lg:max-w-none lg:text-[14px] lg:leading-6 lg:text-white/68">
                 Защищаем, упаковываем и заранее обсуждаем детали переезда.
               </p>
             </div>

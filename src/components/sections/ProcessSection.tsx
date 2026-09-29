@@ -67,75 +67,49 @@ export default function ProcessSection() {
           </p>
         </div>
 
-        {/* MOBILE */}
-        <div className="relative mt-7 lg:hidden">
-          <div className="absolute bottom-6 left-[19px] top-5 w-px bg-gradient-to-b from-[#2B5D8C]/35 via-[#9EB6C9]/45 to-[#D8B98C]/50" />
+        <div className="relative mt-7 lg:mt-10">
+          <div className="absolute bottom-6 left-[19px] top-5 w-px bg-gradient-to-b from-[#2B5D8C]/35 via-[#9EB6C9]/45 to-[#D8B98C]/50 lg:hidden" />
 
-          <div className="space-y-0">
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-[#2B5D8C]/15 lg:block" />
+
+          <div className="relative lg:grid lg:grid-cols-6 lg:gap-5">
             {steps.map((step, index) => {
               const Icon = step.icon;
 
               return (
                 <div
                   key={step.number}
-                  className="relative grid grid-cols-[40px_1fr] gap-4 pb-6 last:pb-0"
+                  className="relative grid grid-cols-[40px_1fr] gap-4 pb-6 last:pb-0 lg:block lg:pb-0"
                 >
                   <div
-                    className={`relative z-10 flex h-10 w-10 items-center justify-center rounded-full border ${
+                    className={`relative z-10 flex h-10 w-10 items-center justify-center rounded-full border lg:h-12 lg:w-12 ${
                       index === steps.length - 1
-                        ? "border-[#D8B98C]/60 bg-[#FFF6E8] text-[#8A5F2E]"
+                        ? "border-[#D8B98C]/60 bg-[#FFF6E8] text-[#8A5F2E] lg:border-[#BFD2EA] lg:bg-[#F8FBFF] lg:text-[#2B5D8C]"
                         : "border-[#BFD2EA] bg-[#F8FBFF] text-[#2B5D8C]"
                     }`}
                   >
-                    <Icon size={17} strokeWidth={1.8} />
+                    <Icon
+                      size={17}
+                      strokeWidth={1.8}
+                      className="lg:h-[19px] lg:w-[19px]"
+                    />
                   </div>
 
-                  <div className="pt-0.5">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-[10px] font-semibold tracking-[0.15em] text-[#2B5D8C]/55">
+                  <div className="pt-0.5 lg:pt-0">
+                    <div className="flex items-baseline gap-2 lg:mt-5 lg:block">
+                      <span className="text-[10px] font-semibold tracking-[0.15em] text-[#2B5D8C]/55 lg:block lg:text-[11px] lg:tracking-[0.14em]">
                         {step.number}
                       </span>
 
-                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-[#10213F]">
+                      <h3 className="text-[16px] font-semibold tracking-[-0.02em] text-[#10213F] lg:mt-1 lg:tracking-normal">
                         {step.title}
                       </h3>
                     </div>
 
-                    <p className="mt-1 text-[13px] leading-5 text-[#657080]">
+                    <p className="mt-1 text-[13px] leading-5 text-[#657080] lg:mt-2">
                       {step.text}
                     </p>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* DESKTOP */}
-        <div className="relative mt-10 hidden lg:block">
-          <div className="absolute left-0 right-0 top-6 h-px bg-[#2B5D8C]/15" />
-
-          <div className="relative grid grid-cols-6 gap-5">
-            {steps.map((step) => {
-              const Icon = step.icon;
-
-              return (
-                <div key={step.number}>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#BFD2EA] bg-[#F8FBFF] text-[#2B5D8C]">
-                    <Icon size={19} strokeWidth={1.8} />
-                  </div>
-
-                  <div className="mt-5 text-[11px] font-semibold tracking-[0.14em] text-[#2B5D8C]/55">
-                    {step.number}
-                  </div>
-
-                  <h3 className="mt-1 text-[16px] font-semibold text-[#10213F]">
-                    {step.title}
-                  </h3>
-
-                  <p className="mt-2 text-[13px] leading-5 text-[#657080]">
-                    {step.text}
-                  </p>
                 </div>
               );
             })}
