@@ -175,7 +175,7 @@ function DesktopHeroActions() {
   icon={<MessageCircle size={18} strokeWidth={1.8} />}
 >
         <span>
-          Получить расчёт в WhatsApp
+          Получить расчёт
 
           <span className="block text-xs font-normal text-white/65">
             в WhatsApp
