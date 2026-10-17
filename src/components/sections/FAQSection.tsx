@@ -41,8 +41,26 @@ const faq = [
   },
 ];
 
-export default function FAQSection() {
+type FAQSectionProps = {
+  locationQuestion?: string;
+  locationAnswer?: string;
+};
+
+export default function FAQSection({
+  locationQuestion = "Работаете только в Хайфе?",
+  locationAnswer =
+    "Нет. Команда MovePro Israel находится в Хайфе, но мы выполняем локальные и междугородние переезды по Израилю.",
+}: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqItems = faq.map((item) =>
+    item.question === "Работаете только в Хайфе?"
+      ? {
+          question: locationQuestion,
+          answer: locationAnswer,
+        }
+      : item
+  );
 
   return (
     <section
@@ -76,7 +94,7 @@ export default function FAQSection() {
           </div>
 
           <div className="space-y-2.5">
-            {faq.map((item, index) => {
+            {faqItems.map((item, index) => {
               const isOpen = openIndex === index;
 
               return (

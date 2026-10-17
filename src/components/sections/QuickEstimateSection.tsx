@@ -17,7 +17,15 @@ const types = [
   { id: "Несколько вещей", icon: Box },
 ];
 
-export default function QuickEstimateSection() {
+type QuickEstimateSectionProps = {
+  fromPlaceholder?: string;
+  toPlaceholder?: string;
+};
+
+export default function QuickEstimateSection({
+  fromPlaceholder = "Хайфа",
+  toPlaceholder = "Крайот",
+}: QuickEstimateSectionProps) {
   const [type, setType] = useState("Квартира / дом");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
@@ -95,17 +103,17 @@ export default function QuickEstimateSection() {
 
               <div className="mt-3 grid grid-cols-2 gap-2.5">
                 <Field
-                  label="Откуда"
-                  placeholder="Хайфа"
-                  value={from}
-                  onChange={setFrom}
+                 label="Откуда"
+                 placeholder={fromPlaceholder}
+                 value={from}
+                 onChange={setFrom}
                 />
 
                 <Field
-                  label="Куда"
-                  placeholder="Крайот"
-                  value={to}
-                  onChange={setTo}
+                 label="Куда"
+                 placeholder={toPlaceholder}
+                 value={to}
+                 onChange={setTo}
                 />
 
                 <Field

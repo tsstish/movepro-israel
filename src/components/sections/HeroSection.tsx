@@ -15,8 +15,24 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
   "Здравствуйте! Хочу обсудить переезд и получить расчёт."
 );
 
-export default function HeroSection() {
-  return (
+type HeroSectionProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  mobileBenefit?: string;
+  mapImageSrc?: string;
+  mapImageAlt?: string;
+};
+
+export default function HeroSection({
+  eyebrow = "Команда из Хайфы. Переезды — по всему Израилю.",
+  title = "Переезды в Хайфе и по всему Израилю",
+  description = "Квартиры, дома, офисы и отдельные вещи. Поможем с упаковкой, разборкой мебели и организуем перевозку от адреса до адреса.",
+  mobileBenefit = "По всему Израилю",
+  mapImageSrc = "/images/israel-map-network.svg",
+  mapImageAlt = "Карта переездов MovePro Israel",
+}: HeroSectionProps) {
+    return (
     <section className="relative overflow-hidden bg-[#F4EFE7] px-4 pb-6 pt-0 text-[#101827] sm:px-5 lg:pb-8">
       <div className="relative mx-auto max-w-7xl">
         <MobileHeader />
@@ -27,13 +43,11 @@ export default function HeroSection() {
             <div className="mt-2 flex items-center gap-2 text-[12px] font-medium leading-5 text-[#8A735F] lg:mb-5 lg:mt-0 lg:text-[13px]">
               <MapPin size={16} strokeWidth={1.8} className="shrink-0" />
 
-              <span>
-                Команда из Хайфы. Переезды — по всему Израилю.
-              </span>
+              <span>{eyebrow}</span>
             </div>
 
 <h1 className="mt-5 w-full text-[clamp(43px,8.6vw,64px)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#101827] lg:mt-0 lg:max-w-3xl lg:text-[76px]">
-  Переезды в Хайфе и по всему Израилю{" "}
+  {title}{" "}
   <span className="relative mt-1 block w-fit font-serif italic text-[#2B5D8C] sm:ml-auto sm:mr-8 lg:ml-0 lg:mr-0 lg:inline-block lg:-rotate-2">
     без лишних забот
 
@@ -54,9 +68,8 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-7 w-full max-w-none text-[17px] leading-7 text-[#4B5563] sm:max-w-[640px] sm:text-[18px] sm:leading-8 lg:mt-8 lg:max-w-xl">
-              Квартиры, дома, офисы и отдельные вещи. Поможем с упаковкой,
-              разборкой мебели и организуем перевозку от адреса до адреса.
-            </p>
+  {description}
+</p>
 
             <MobileHeroActions />
             <DesktopHeroActions />
@@ -64,11 +77,11 @@ export default function HeroSection() {
             <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 lg:hidden">
               <MobileBenefit text="Детали заранее" />
               <MobileBenefit text="Защита мебели" />
-              <MobileBenefit text="По всему Израилю" />
+              <MobileBenefit text={mobileBenefit} />
             </div>
           </div>
 
-          <HeroVisual />
+          <HeroVisual mapImageSrc={mapImageSrc} mapImageAlt={mapImageAlt} />
         </div>
       </div>
     </section>
@@ -210,7 +223,13 @@ function MobileBenefit({ text }: { text: string }) {
   );
 }
 
-function HeroVisual() {
+function HeroVisual({
+  mapImageSrc,
+  mapImageAlt,
+}: {
+  mapImageSrc: string;
+  mapImageAlt: string;
+}) {
   return (
     <div className="relative mt-8 h-[270px] overflow-hidden rounded-[32px] border border-white/70 bg-white/25 p-1.5 shadow-[0_24px_60px_rgba(16,33,63,0.1)] backdrop-blur-2xl sm:h-[340px] lg:mt-0 lg:h-[430px] lg:rounded-[42px] lg:p-2">
       <div className="relative h-full overflow-hidden rounded-[24px] lg:rounded-[34px]">
@@ -229,11 +248,11 @@ function HeroVisual() {
 
         <div className="absolute right-[-16px] top-[-22px] h-[290px] w-[230px] opacity-75 lg:right-2 lg:top-0 lg:h-[430px] lg:w-[330px] lg:opacity-100">
           <Image
-            src="/images/israel-map-network.svg"
-            alt="Карта переездов MovePro Israel"
-            fill
-            sizes="(max-width: 1023px) 230px, 330px"
-            className="object-contain drop-shadow-[0_18px_34px_rgba(43,93,140,0.28)]"
+          src={mapImageSrc}
+          alt={mapImageAlt}
+          fill
+          sizes="(max-width: 1023px) 230px, 330px"
+          className="object-contain drop-shadow-[0_18px_34px_rgba(43,93,140,0.28)]"
           />
         </div>
 

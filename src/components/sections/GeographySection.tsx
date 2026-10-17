@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 
-const places = [
+const defaultPlaces = [
   "Хайфа",
   "Крайот",
   "Нешер",
@@ -13,7 +13,22 @@ const places = [
   "Иерусалим",
 ];
 
-export default function GeographySection() {
+type GeographySectionProps = {
+  title?: string;
+  description?: string;
+  places?: string[];
+  placesLabel?: string;
+  note?: string;
+};
+
+export default function GeographySection({
+  title = "Переезды из Хайфы и по всему Израилю",
+  description =
+    "MovePro Israel выполняет местные и междугородние переезды квартир, домов и офисов, а также перевозку мебели, техники и отдельных вещей.",
+  places = defaultPlaces,
+  placesLabel = "Работаем по всему Израилю",
+  note = "И другие города страны — маршрут переезда обсуждаем индивидуально.",
+}: GeographySectionProps) {
   return (
     <section
       id="areas"
@@ -30,18 +45,17 @@ export default function GeographySection() {
           </div>
 
           <h2 className="mt-3 max-w-xl text-[28px] font-semibold leading-[1.04] tracking-[-0.04em] text-[#10213F] md:text-[40px]">
-            Переезды из Хайфы и по всему Израилю
+            {title}
           </h2>
 
           <p className="mt-3 max-w-xl text-[13.5px] leading-5 text-[#657080]">
-            MovePro Israel выполняет местные и междугородние переезды квартир,
-            домов и офисов, а также перевозку мебели, техники и отдельных вещей.
+            {description}
           </p>
         </div>
 
         <div className="mt-5 lg:mt-0">
           <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-[#8A735F]">
-            Работаем по всему Израилю
+            {placesLabel}
           </p>
 
           <div className="mt-3 flex flex-wrap gap-x-1.5 gap-y-2">
@@ -60,7 +74,7 @@ export default function GeographySection() {
           </div>
 
           <p className="mt-3 max-w-2xl text-[12.5px] leading-5 text-[#7A8390]">
-            И другие города страны — маршрут переезда обсуждаем индивидуально.
+            {note}
           </p>
         </div>
       </div>
