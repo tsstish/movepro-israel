@@ -10,6 +10,7 @@ import HebrewTrustSection from "@/components/he/HebrewTrustSection";
 import HebrewFAQSection from "@/components/he/HebrewFAQSection";
 import HebrewFinalCTASection from "@/components/he/HebrewFinalCTASection";
 import HebrewFooter from "@/components/he/HebrewFooter";
+import HebrewSmartWhatsAppPrompt from "@/components/he/HebrewSmartWhatsAppPrompt";
 
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function HebrewPage() {
       <HebrewFAQSection />
       <HebrewFinalCTASection />
       <HebrewFooter />
+      <HebrewSmartWhatsAppPrompt />
       <div className="h-20 lg:hidden"/><div className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/50 bg-[#F4EFE7]/95 p-3 backdrop-blur lg:hidden"><div className="mx-auto flex max-w-md gap-2"><a href={wa} data-cta="he-sticky" className="flex h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[#10213F] font-semibold text-white"><MessageCircle size={18}/> שלחו הודעה</a><a href="tel:+972546745954" aria-label="התקשרו" className="flex h-12 w-14 items-center justify-center rounded-2xl bg-white"><Phone size={19}/></a></div></div>
     </main>
   );
