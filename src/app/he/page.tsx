@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MessageCircle, Phone } from "lucide-react";
 import HebrewEstimate from "@/components/HebrewEstimate";
 import HebrewHeroSection from "@/components/he/HebrewHeroSection";
 import HebrewServicesSection from "@/components/he/HebrewServicesSection";
@@ -26,6 +27,8 @@ const faq = [
   ["האם אתם מפרקים ומרכיבים רהיטים?", "אפשר לתאם פירוק והרכבה לפי סוג הרהיט ודרישות ההובלה."],
   ["אתם עובדים רק בחיפה?", "לא. הצוות שלנו מחיפה ואנחנו מבצעים הובלות מקומיות ובין־עירוניות ברחבי ישראל."],
 ];
+
+const wa = "/whatsapp?lang=he";
 
 export default function HebrewPage() {
   const schema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } })) };
