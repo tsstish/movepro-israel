@@ -111,7 +111,7 @@ function MobileHeader() {
           <div className="mt-1.5 text-[12.5px] leading-none text-[#6B7280]">
             Переезд без стресса
           </div>
-          <a href="/he" lang="he" dir="rtl" className="ml-auto rounded-full border border-[#10213F]/20 bg-white/60 px-3 py-2 text-xs font-semibold text-[#10213F]">עברית</a>
+          <a href="/api/language?lang=he" lang="he" dir="rtl" className="ml-auto rounded-full border border-[#10213F]/20 bg-white/60 px-3 py-2 text-xs font-semibold text-[#10213F]">עברית</a>
         </div>
       </div>
     </header>
@@ -145,7 +145,7 @@ function DesktopHeader() {
       </div>
 
       <div className="flex items-center gap-2">
-        <a href="/he" lang="he" dir="rtl" className="rounded-full border border-[#10213F]/20 bg-white/60 px-4 py-3 text-sm font-semibold text-[#10213F] hover:bg-white">עברית</a>
+        <a href="/api/language?lang=he" lang="he" dir="rtl" className="rounded-full border border-[#10213F]/20 bg-white/60 px-4 py-3 text-sm font-semibold text-[#10213F] hover:bg-white">עברית</a>
         <GlassButton
           href={`tel:${PHONE_NUMBER}`}
           light
