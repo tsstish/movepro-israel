@@ -22,7 +22,7 @@ type GeographySectionProps = {
 };
 
 export default function HebrewGeographySection({
-  title = "Переезды из Хайфы и по всему Израилю",
+  title = "הובלות מחיפה ולכל רחבי הארץ",
   description =
     "MovePro Israel מבצעת הובלות דירה, בית ומשרד בחיפה ובצפון, וגם הובלות בין־עירוניות והובלת רהיטים ומוצרי חשמל.",
   places = defaultPlaces,
