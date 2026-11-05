@@ -6,6 +6,7 @@ import {
   MessageCircle,
   Phone,
   ShieldCheck,
+  Languages,
 } from "lucide-react";
 
 const PHONE_NUMBER = "+972546745954";
@@ -90,7 +91,7 @@ export default function HebrewHeroSection({
 
 function MobileHeader() {
   return (
-    <header className="flex h-[82px] items-center lg:hidden">
+    <header className="flex h-[82px] items-center justify-between gap-2 lg:hidden">
       <div className="flex min-w-0 items-center gap-3">
         <div className="relative h-[68px] w-[68px] shrink-0 overflow-visible">
           <Image
@@ -111,9 +112,9 @@ function MobileHeader() {
           <div className="mt-1.5 text-[12.5px] leading-none text-[#6B7280]">
             עוברים בראש שקט
           </div>
-          <a href="/api/language?lang=ru" lang="ru" dir="ltr" className="ml-auto rounded-full border border-[#10213F]/20 bg-white/60 px-3 py-2 text-xs font-semibold text-[#10213F]">Русский</a>
         </div>
       </div>
+      <a href="/api/language?lang=ru" lang="ru" dir="ltr" aria-label="Русская версия" className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-[#10213F]/15 bg-white/55 px-3 py-2 text-[12px] font-medium text-[#10213F] shadow-sm backdrop-blur-sm transition hover:bg-white"><Languages size={15} strokeWidth={1.7} /> RU</a>
     </header>
   );
 }
@@ -145,7 +146,7 @@ function DesktopHeader() {
       </div>
 
       <div className="flex items-center gap-2">
-        <a href="/api/language?lang=ru" lang="ru" dir="ltr" className="rounded-full border border-[#10213F]/20 bg-white/60 px-4 py-3 text-sm font-semibold text-[#10213F] hover:bg-white">Русский</a>
+        <a href="/api/language?lang=ru" lang="ru" dir="ltr" aria-label="Русская версия" className="inline-flex items-center gap-2 rounded-full border border-[#10213F]/15 bg-white/55 px-4 py-3 text-sm font-medium text-[#10213F] hover:bg-white"><Languages size={16} /> RU</a>
         <GlassButton
           href={`tel:${PHONE_NUMBER}`}
           light
