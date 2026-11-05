@@ -108,6 +108,9 @@ export default function Footer() {
           <p>© 2026 MovePro Israel</p>
           <p>Переезд без стресса</p>
         </div>
+        <div className="mt-4 border-t border-white/10 pt-3 text-center text-[11px] text-white/45">
+          Разработка сайта: <a href="https://nexoradesign.online/" target="_blank" rel="noopener noreferrer" className="font-semibold tracking-[0.02em] text-white/70 underline-offset-4 transition hover:text-white hover:underline" aria-label="NeXora — разработка сайтов">NeXora</a>
+        </div>
       </div>
     </footer>
   );
