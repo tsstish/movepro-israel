@@ -27,7 +27,7 @@ export default function HebrewTrustSection() {
           <div className="relative min-h-[360px] overflow-hidden sm:min-h-[430px] lg:min-h-[520px]">
             <Image
               src="/images/service-furniture.webp"
-              alt="הובלה עם תשומת לב לפרטים мебели MovePro Israel"
+              alt="הובלת רהיטים עם MovePro Israel"
               fill
               sizes="(max-width: 1023px) 100vw, 58vw"
               className="object-cover"
