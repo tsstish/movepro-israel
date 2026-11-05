@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "Квартирные, офисные и междугородние переезды в Хайфе и по Израилю. Перевозка мебели и техники, упаковка, разборка и сборка мебели. MovePro Israel.",
   alternates: {
     canonical: "https://moveproisrael.online/",
+    languages: { "ru-IL": "https://moveproisrael.online/", "he-IL": "https://moveproisrael.online/he" },
   },
   openGraph: {
     title: "Переезды в Хайфе и по Израилю | MovePro Israel",
