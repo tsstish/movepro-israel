@@ -79,21 +79,21 @@ export default function HebrewFooter() {
 
               <div className="mt-3 space-y-2.5 text-[11.5px] leading-[1.25] lg:text-[12.5px]">
                 <Link
-                  href="/privacy"
+                  href="/he/privacy"
                   className="block text-white/50 transition duration-300 ease-out hover:-translate-x-0.5 hover:text-white"
                 >
                   מדיניות פרטיות
                 </Link>
 
                 <Link
-                  href="/accessibility"
+                  href="/he/accessibility"
                   className="block text-white/50 transition duration-300 ease-out hover:-translate-x-0.5 hover:text-white"
                 >
                   הצהרת נגישות
                 </Link>
 
                 <Link
-                  href="/terms"
+                  href="/he/terms"
                   className="block text-white/50 transition duration-300 ease-out hover:-translate-x-0.5 hover:text-white"
                 >
                   תנאי שימוש
@@ -107,6 +107,9 @@ export default function HebrewFooter() {
         <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-3 text-[10px] leading-none text-white/32">
           <p dir="ltr">© 2026 MovePro Israel</p>
           <p>עוברים בראש שקט</p>
+        </div>
+        <div className="mt-4 border-t border-white/10 pt-3 text-center text-[11px] text-white/45">
+          עיצוב ופיתוח האתר: <a href="https://nexoradesign.online/" target="_blank" rel="noopener noreferrer" className="font-semibold tracking-[0.02em] text-white/70 underline-offset-4 transition hover:text-white hover:underline" aria-label="NeXora — עיצוב ופיתוח אתרים">NeXora</a>
         </div>
       </div>
     </footer>
