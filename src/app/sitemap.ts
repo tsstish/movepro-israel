@@ -20,12 +20,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${siteUrl}/he/privacy`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: `${siteUrl}/privacy`,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
+      url: `${siteUrl}/he/accessibility`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: `${siteUrl}/accessibility`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${siteUrl}/he/terms`,
       changeFrequency: "yearly",
       priority: 0.3,
     },
